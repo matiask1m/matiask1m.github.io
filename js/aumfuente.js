@@ -1,1 +1,0 @@
-javascript:void(document.getElementById('ejemplo').style.fontSize='20px')
