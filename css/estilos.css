@@ -1,5 +1,5 @@
 
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500);@import url(https://fonts.googleapis.com/css?family=Raleway:400); /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500);@import url(https://fonts.googleapis.com/css?family=Raleway:400);@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap'); /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 
 /*html {
     font-family: "Oswald",sans-serif;
@@ -8,44 +8,59 @@
 }
 */
 
-
-#navegador{
-  /*  background-color: #000;*/
-
+header{
+	font-family: "Skranji";
+	background-color: aquamarine;
+	text-align: center;
+	font-weight: bolder;
+    padding: 14px 20px;
+    font-size: 34px;
+    font-weight: bold;
+	
 }
 
-#navegador ul{
-    list-style-type: none;
-    text-align: center;
+
+#navegador {
+    font-family: "Skranji";
+    font-weight: bold;
+    background-color: black;
+    padding: 14px 20px;
+
  }
 
- #navegador li{
-    display: inline;
-    text-align: center;
-    /*margin: 0 10px 0 0;*/
- }
 
- #navegador li a {
-    padding: 2px 7px 2px 7px;
+ #navegador a {
+    padding: 14px 20px;
     color: #666;
-    background-color: #eeeeee;
-    border: 1px solid #ccc;
     text-decoration: none;
+    
+
  }
 
- #navegador li a:hover{
-    background-color: red;
+ #navegador a:hover{
+    background-color: grey;
     color: #ffffff;
+        -webkit-animation: 0.7s flash 1;
+    }
+    
+    @-webkit-keyframes flash{
+        50%{
+            opacity: 1;
+        }
+        25%, 75%{
+            opacity: 0;
+       
+      
+    }  
  }
 
 body{
     width: 100%;
-    background-image: linear-gradient(135deg, 
-    #00B7D4, #505488, #2F3F80,#161569,
-    #000 ,#5A4894,#A950A1, #DD7CAE);
+    background-image: linear-gradient(135deg,     #00B7D4, #505488, #2F3F80,#161569,    #000 ,#5A4894,#A950A1, #DD7CAE);
     background-size: 500%;
-    animation: fanimado 10s infinite; 
-    }
+    animation: fanimado 10s infinite;
+    -webkit-animation: fanimado 10s infinite;
+}
     
     @keyframes fanimado{
         0%{
@@ -79,20 +94,45 @@ body{
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        
-    }
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
 
-    #button{
-        display:flex;
+    #btn1{
+        justify-content: center;
+        text-align: center;
+    }
+    button{
+        display: inline-block;
+        background: #000;
+        cursor: pointer;
+        border: none;
+        padding:10px 10px;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
         justify-content:center;
+        text-align: center;
+        position:relative;
+        border-radius: 12px;
         align-items:center;
-      }
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+}
       
       
 
     #presentacion{
 
-        font-family: 'Mynerve', cursive;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         color:white;
         text-align: center;
         box-shadow: #000;
@@ -100,7 +140,7 @@ body{
     }
 
     #nombre{
-        font-family: 'Mynerve', cursive;
+        font-family: r, cursive;
         color:white;
         text-align: center;
         font-size: 30px;
@@ -151,4 +191,10 @@ body{
         text-align: center;
         font-size: 10px;
 
+    }
+
+    @media screen and (max-width:700px){
+        #navegador a{
+            flex-direction: column;
+        }
     }
